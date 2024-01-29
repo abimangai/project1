@@ -1,0 +1,117 @@
+<head>
+  <title>BSS product's Details</title>
+  <link rel="icon" href="/FRONTEND/images/crystal_delta_logo-icon.png" />
+  <link rel="stylesheet" href="/FRONTEND/productDetails.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,200&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body style="padding-bottom: 100px; font-family: 'Poppins', sans-serif">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="/FRONTEND/HTML_Pages/products.html">
+          <img
+            src="/FRONTEND/images/crystal_delta_logo.jpg"
+            width="50px"
+            alt=""
+          />
+        </a>
+      </div>
+      <nav>
+        <a href="/FRONTEND/HTML_Pages/sell.html">
+          <button class="sell-btn">SELL</button>
+        </a>
+        <a href="/FRONTEND/HTML_Pages/account.html">
+          <button class="account-btn">Account</button>
+        </a>
+      </nav>
+    </div>
+    <hr />
+    <div>
+      <ul class="menu-item">
+        <a href=""><il>All</il><hr></a>
+        <a href=""><il>Car</il></a>
+        <a href=""><il>Furniture</il></a>
+        <a href=""><il>Motorcycle</il></a>
+        <a href=""><il>Mobile</il></a>
+        <a href=""><il>Tv</il></a>
+        <a href=""><il>kitchen appliances</il></a>
+        <a href=""> <il>Computer & Laptops</il></a>
+        <a href=""> <il>Home appliances </il></a>
+        <a href=""> <il>Games & Entertainments</il></a>
+      </ul>
+    </div>
+    <hr />
+    <a href="/FRONTEND/HTML_Pages/products.html ">
+      <button class="arrow-btn">&larr;</button>
+    </a>
+  </div>
+  <div class="product-details" id="product-details-container">
+    <div class="product-image">
+    </div>
+    <div class="others">
+      <h2></h2><p></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const productDetailsContainer = document.getElementById(
+        "product-details-container"
+      );
+
+      // Retrieve product id from the query string
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+
+      // Fetch product details using the product id
+      fetch(`http://localhost:2403/products/${productId}`)
+        .then((response) => response.json())
+        .then((product) => {
+          // Display product details
+          const productImage = document.createElement("img");
+          productImage.src = `${product.photo_url}`;
+          productImage.alt = product.title;
+          productImage.className = "product-image";
+          const detailsAboutProudct = document.createElement("h2");
+          detailsAboutProudct.textContent = "Product Details: ";
+
+          const productTitle = document.createElement("h3");
+          productTitle.textContent = product.title;
+
+          const productPrice = document.createElement("p");
+          productPrice.textContent = `Price: $${product.price}`;
+
+          const productDescription = document.createElement("p");
+          productDescription.textContent = `Description: ${product.description}`;
+
+          const address = document.createElement("p");
+          address.textContent = "12A,1st street,main road, Australia";
+
+          const orderButton = document.createElement("button");
+          orderButton.textContent = "Place your order";
+          orderButton.className = "order-btn";
+
+          productDetailsContainer.appendChild(productImage);
+          productDetailsContainer.appendChild(detailsAboutProudct);
+          productDetailsContainer.appendChild(productTitle);
+          productDetailsContainer.appendChild(productPrice);
+          productDetailsContainer.appendChild(productDescription);
+          productDetailsContainer.appendChild(address);
+          productDetailsContainer.appendChild(orderButton);
+
+          orderButton.addEventListener("click",function(){
+            alert("ordered succesfully")
+          });
+          
+        })
+        .catch((error) =>
+          console.error("Error fetching product details:", error)
+        );
+    });
+  </script>
+</body>

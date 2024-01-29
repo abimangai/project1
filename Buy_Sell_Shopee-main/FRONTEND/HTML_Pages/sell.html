@@ -1,0 +1,72 @@
+<head>
+  <title>Sell products</title>
+  <link rel="icon" href="/FRONTEND/images/crystal_delta_logo-icon.png" />
+  <link rel="stylesheet" href="/FRONTEND/sell.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,200&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body style="font-family: 'Poppins', sans-serif">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="/FRONTEND/HTML_Pages/products.html">
+          <img
+            src="/FRONTEND/images/crystal_delta_logo.jpg"
+            width="50px"
+            alt=""
+          />
+        </a>
+      </div>
+      <nav>
+        <a href="/FRONTEND/HTML_Pages/account.html">
+          <button class="account-btn">
+            Account
+          </button>
+        </a>
+        
+      </nav>
+    </div>
+    <hr />
+    <div class="centre">
+      <div class="row1">
+        <a href="/FRONTEND/HTML_Pages/products.html ">
+          <button class="arrow-btn">&larr;</button>
+        </a>
+
+        <h5>Post Your Ad</h5>
+      </div>
+      <form
+        class="form-section"
+        action="/product"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="col1">
+          <label><b>Title</b></label>
+          <input type="text" name="title" class="title-input" required />
+          <label><b>Description</b></label>
+          <input type="text" name="description" class="description-input" />
+          <label><b>Price</b></label>
+          <input type="text" name="price" class="price-input" required />
+          <div>
+            <input type="checkbox" name="price_negotiation" />price negotitation
+          </div>
+          <label><b>Product category</b></label>
+          <input type="text" name="category" class="category-input" required />
+
+          <label><b>Phone number</b></label>
+          <input type="text" name="phone_number" class="number-input" required />
+          <button class="post-btn" type="submit">Add your Post</button>
+        </div>
+        <div class="col2">
+          <label for="photo_url"><b>Updload Photo</b></label>
+          <input type="file" name="photo_url" class="img-input" required />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

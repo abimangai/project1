@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1300px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+ nav{
+    flex: 1;
+    text-align: right;
+}
+.login-btn{
+background-color: white;
+color: orangered;
+border: none;
+border-radius: 4px;
+padding: 10px 20px;
+cursor: pointer;
+transition:background-color 0.15s;
+}
+.login-btn:hover{
+    background-color: orangered;
+    color: white;
+}
+.register-btn{
+background-color: orangered;
+color: white;
+border:none;
+padding: 10px 20px;
+margin-left: 10px;
+border-radius: 5px;
+cursor: pointer;
+transition: opacity 0.15s;
+}
+.register-btn:hover{
+    opacity: 0.8;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col img{
+    max-width: 100%;
+    padding: 50px 0px;
+}
+.col h1{
+    font-size: 50px;
+    line-height: 60px;
+}
+.col p{
+    font-size: 20px;
+    line-height: 60px;
+}
+.b-s{
+    color: orangered;
+}
+.product-font{
+    color: cyan;
+}
+.explore-btn{
+    background-color: orangered;
+color: white;
+border:none;
+padding: 18px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: opacity 0.15s;
+}
+.explore-btn:hover{
+    opacity: 0.8;
+}

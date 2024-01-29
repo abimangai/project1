@@ -1,0 +1,137 @@
+.container{
+    max-width: 1300px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+ nav{
+    flex: 1;
+    text-align: right;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logout-btn,.account-btn{
+    background-color: white;
+    color: orangered;
+    border: solid;
+    border-width: 1px;
+    border-color: orangered;
+    border-radius: 5px;
+    padding: 8px 18px;
+    margin-left: 10px;
+    transition:background-color 0.8s;
+    cursor: pointer;
+    
+}
+.logout-btn:hover{
+    background-color: orangered;
+    color: white;
+}
+.account-btn:hover{
+    background-color: orangered;
+    color: white;
+}
+.sell-btn{
+background-color: orangered;
+color: white;
+border:none;
+padding: 10px 20px;
+margin-left: 10px;
+border-radius: 5px;
+cursor: pointer;
+transition: opacity 0.15s;
+}
+.sell-btn:hover{
+    opacity: 1;
+}
+.account-btn:hover{
+    opacity: 0.8;
+}
+.menu-item{
+    display: flex;
+    justify-content: space-between ;
+}
+.head-of-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.b-s{
+    color: orangered;
+}
+.product-font{
+    color: cyan;
+}
+.h3{
+    text-align: center ;
+}
+.product-list{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+.product-list img{
+    width: 162px;
+    height: 150px;
+    border: solid;
+    border-color: rgb(235, 219, 219);
+    border-width: 2px;
+    padding: 20px 40px;
+    
+    /* margin-left: 45px;
+    margin-top: 45px; */
+
+}
+.grid{
+    
+    display: grid;
+    padding-top: 28px;  
+    padding-left: 28px;
+    row-gap: 10px;
+    border: solid;
+    border-color: rgb(235, 219, 219);
+    border-width: 2px;
+    box-shadow: 0px 0px 10px rgb(218, 128, 69);
+}
+/* .grid div{
+display: grid;
+grid-template-rows:auto;
+margin-left: 45px;
+margin-right: 45px;
+margin-bottom: 20px;
+} */
+.buy-button{
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 28px;
+    margin-bottom: 28px;
+    border-radius: 4px;
+    transition: opacity 0.15s;
+}
+.buy-button:hover{
+    opacity: 0.8;
+}
+.products-font{
+    font-size: 15px;
+    font-weight: 400;
+    color: gray ;
+}
+.product-price{
+    font-size: 18px;
+    font-weight: 450;
+}
+.product-description{
+    font-size: 10px;
+    color: gray;
+}

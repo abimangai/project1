@@ -1,0 +1,94 @@
+.container{
+    max-width: 1300px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+ nav{
+    flex: 1;
+    text-align: right;
+}
+
+.sell-btn, .account-btn{
+background-color: orangered;
+color: white;
+border:none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: opacity 0.15s;
+}
+.sell-btn:hover{
+    opacity: 0.8;
+}
+.account-btn:hover{
+    opacity: 0.5;
+}
+.menu-item{
+    display: flex;
+    justify-content: space-between ;
+}
+.arrow-btn{
+    border: none;
+    background-color: orangered;
+    color: white;
+    padding: 1px 10px;
+    cursor: pointer;
+    transition:background-color 0.15s;
+}
+.arrow-btn:hover{
+    background-color: white;
+    color: orangered;
+}
+
+
+  .product-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+.product-details{
+    display:grid;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    row-gap: 0px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(236, 97, 3);
+    
+}
+.product-details img{
+    display: inline-block;
+    width: 400px;
+    margin-left: 100px;
+}
+.product-details p,h2,h3,.order-btn{
+    margin-left: 100px;
+}
+.product-details h2{
+    color: orangered;
+}
+
+.order-btn{
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width:fit-content;
+    padding: 20px;
+    cursor: pointer;
+}
+.order-btn:hover{
+    opacity: 0.8;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

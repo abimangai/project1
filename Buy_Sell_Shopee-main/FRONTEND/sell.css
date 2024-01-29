@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+ nav{
+    flex: 1;
+    text-align: right;
+}
+
+.account-btn,.post-btn {
+background-color: orangered;
+color: white;
+border:none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: opacity 0.15s;
+}
+.post-btn{
+    margin: 20px;
+    height: 40px;
+}
+.account-btn:hover{
+    opacity: 0.8;
+}
+.arrow-btn{
+    border: none;
+    background-color: orangered;
+    color: white;
+    padding: 1px 10px;
+    cursor: pointer;
+    transition:background-color 0.15s;
+}
+.arrow-btn:hover{
+    background-color: white;
+    color: orangered;
+}
+.row1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.row1 h5{
+    margin-left: 450px;
+}
+.form-section{
+    margin-top: 0px;
+    margin-left: 500px;
+    display: flex;
+    flex-direction: row;
+
+}
+.col1{
+    display: flex;
+    flex-direction: column;
+}
+.col1 label{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.col1 input,select{
+    margin: 10px 20px;
+}
+
+    
+.col2{
+    display: flex;
+    flex-direction: column;
+}
+.col2 label{
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.title-input,.price-input,.category-input,.number-input{
+    height: 35px;
+    width: 250px;
+}
+.description-input{
+    height: 70px;
+}
+.img-input{
+    height: 200px;
+}
